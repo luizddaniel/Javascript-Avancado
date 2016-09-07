@@ -30,6 +30,7 @@ function setList(list){
     }
     table += '</tbody>';
     document.getElementById("listTable").innerHTML = table;
+    getTotal(list);
 }
 
 function formatDesc(desc){
@@ -171,6 +172,14 @@ function validation(){
         return 1;
     }
 
+}
+
+function getTotal(list){
+    var total = 0;
+    for(var key in list){
+        total += list[key].value * list[key].amount;
+    }
+    document.getElementById("totalValue").innerHTML = formatValue(total);
 }
 
 setList(list);
