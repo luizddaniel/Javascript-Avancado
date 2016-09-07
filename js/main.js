@@ -26,7 +26,7 @@ function setList(list){
     var table = ' <thead><tr><td>Descripition</td><td>Amount</td><td>Value</td><td>Action</td></tr></thead>';
 
     for(var key in list){
-        table += ' <tr><td>' + formatDesc(list[key].desc) + '</td><td>'+ list[key].amount  +'</td><td>' + formatValue(list[key].value)  +'</td><td><button class="btn btn-default" onclick="setUpdate('+key+');">Edit</button>  <button class="btn btn-default" onclick="setDelete();">Delete</button></td></tr>';
+        table += ' <tr><td>' + formatDesc(list[key].desc) + '</td><td>'+ list[key].amount  +'</td><td>' + formatValue(list[key].value)  +'</td><td><button class="btn btn-default" onclick="setUpdate('+key+');">Edit</button>  <button class="btn btn-default" onclick="deleteData('+key+');">Delete</button></td></tr>';
     }
     table += '</tbody>';
     document.getElementById("listTable").innerHTML = table;
@@ -104,6 +104,20 @@ function updateData(){
     setList(list);
 }
 
+function deleteData(id){
+    if(confirm("Delete this item?")){
+        if(id === list.length -1){
+            list.pop();
+        }else if(id === 0){
+            list.shift();
+        }else{
+            var auxini = list.slice(0,id);
+            var auxend = list.slice(id + 1);
+            list = auxini.concat(auxend);
+        }
+        setList(list);
+    }
+}
 
 setList(list);
 console.log(getTotal(list));
