@@ -8,9 +8,9 @@
     <ignored path="Javascript-Avancado.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="495d8958-fdd5-4108-8602-39f07746941e" time="1473275146834" ignored="false" />
-    <file path="/index.html" changelist="495d8958-fdd5-4108-8602-39f07746941e" time="1473282289031" ignored="false" />
+    <file path="/index.html" changelist="495d8958-fdd5-4108-8602-39f07746941e" time="1473283461324" ignored="false" />
     <file path="/config.js" changelist="495d8958-fdd5-4108-8602-39f07746941e" time="1473192325049" ignored="false" />
-    <file path="/main.js" changelist="495d8958-fdd5-4108-8602-39f07746941e" time="1473283177295" ignored="false" />
+    <file path="/main.js" changelist="495d8958-fdd5-4108-8602-39f07746941e" time="1473283421171" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="0" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-11.653846">
+            <state line="35" column="0" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.49682876">
               <folding>
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -51,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="19" selection-start="1087" selection-end="1087" vertical-scroll-proportion="-4.416834">
+            <state line="187" column="22" selection-start="4967" selection-end="4967" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#155#0" expanded="false" />
               </folding>
@@ -81,13 +81,13 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/js/config.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="752" />
+    <option name="x" value="524" />
     <option name="width" value="913" />
     <option name="height" value="698" />
   </component>
@@ -198,7 +198,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="752" y="0" width="913" height="698" extended-state="0" />
+    <frame x="524" y="0" width="913" height="698" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -340,21 +340,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="0" selection-start="1636" selection-end="1636" vertical-scroll-proportion="-11.653846">
+        <state line="187" column="22" selection-start="4967" selection-end="4967" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#0#155#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="19" selection-start="1087" selection-end="1087" vertical-scroll-proportion="-4.416834">
+        <state line="35" column="0" selection-start="1464" selection-end="1464" vertical-scroll-proportion="0.49682876">
           <folding>
-            <element signature="e#0#155#0" expanded="false" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
