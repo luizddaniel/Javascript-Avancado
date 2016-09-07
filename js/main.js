@@ -31,6 +31,7 @@ function setList(list){
     table += '</tbody>';
     document.getElementById("listTable").innerHTML = table;
     getTotal(list);
+    saveListStorage(list);
 }
 
 function formatDesc(desc){
@@ -189,5 +190,20 @@ function deleteList(){
     }
 }
 
-setList(list);
+function saveListStorage(list){
+    var jsonStr = JSON.stringify(list);
+
+    localStorage.setItem("list", jsonStr);
+}
+
+function initListStorage(){
+    var testList = localStorage.getItem("list");
+
+    if(testList){
+        list = JSON.parse(testList);
+    }
+    setList(list);
+}
+
+initListStorage();
 console.log(getTotal(list));
