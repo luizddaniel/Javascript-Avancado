@@ -26,7 +26,7 @@ function setList(list){
     var table = ' <thead><tr><td>Descripition</td><td>Amount</td><td>Value</td><td>Action</td></tr></thead>';
 
     for(var key in list){
-        table += ' <tr><td>' + formatDesc(list[key].desc) + '</td><td>'+ list[key].amount  +'</td><td>' + formatValue(list[key].value)  +'</td><td><button class="btn btn-default" onclick="setUpdate('+key+');">Edit</button>  <button class="btn btn-default" onclick="deleteData('+key+');">Delete</button></td></tr>';
+        table += ' <tr><td>' + formatDesc(list[key].desc) + '</td><td>'+ formatAmount(list[key].amount)  +'</td><td>' + formatValue(list[key].value)  +'</td><td><button class="btn btn-default" onclick="setUpdate('+key+');">Edit</button>  <button class="btn btn-default" onclick="deleteData('+key+');">Delete</button></td></tr>';
     }
     table += '</tbody>';
     document.getElementById("listTable").innerHTML = table;
@@ -51,7 +51,19 @@ function formatValue(value){
 
 }
 
+
+function formatAmount(amount){
+    return parseInt(amount);
+
+}
+
+
 function addData(){
+
+    if(!validation()){
+        return;
+    }
+
     var desc = document.getElementById("desc").value;
     var amount = document.getElementById("amount").value;
     var value = document.getElementById("value").value;
@@ -92,6 +104,11 @@ function resetForm(){
 
 function updateData(){
 
+    if(!validation()){
+        return;
+    }
+
+
     var id = document.getElementById("idUpdate").value;
 
     var desc = document.getElementById("desc").value;
@@ -102,6 +119,7 @@ function updateData(){
 
     resetForm();
     setList(list);
+
 }
 
 function deleteData(id){
@@ -117,6 +135,42 @@ function deleteData(id){
         }
         setList(list);
     }
+}
+
+function validation(){
+    var desc = document.getElementById("desc").value;
+    var amount = document.getElementById("amount").value;
+    var value = document.getElementById("value").value;
+    var errors = "";
+    document.getElementById("errors").style.display = "none";
+    if(desc === ""){
+        errors += '<p>Fill out description</p>';
+    }
+    if(amount === ""){
+        errors += '<p>Fill out a quantity</p>';
+    }else if(amount != parseInt(amount)){
+        errors += '<p>Fill out a valid amount</p>';
+    }
+    if(value === ""){
+        errors += '<p>Fill out a value</p>';
+    }else if(value != parseFloat(value)){
+        errors += '<p>Fill out a valid value</p>';
+    }
+
+    if(errors != ""){
+        document.getElementById("errors").style.display = "block";
+        document.getElementById("errors").style.backgroundColor = "rgba(85, 85, 85, 0.3)";
+        document.getElementById("errors").style.color = "white";
+        document.getElementById("errors").style.padding = "10px";
+        document.getElementById("errors").style.margin = "10px";
+        document.getElementById("errors").style.borderRadius = "13px";
+
+        document.getElementById("errors").innerHTML = "<h3>Error:</h3>" + errors;
+        return 0;
+    }else{
+        return 1;
+    }
+
 }
 
 setList(list);
